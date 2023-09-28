@@ -221,7 +221,7 @@
 				labels: ['Tests Passed', 'Tests Failed', 'Tests Skipped'],
 				datasets: [{
 					label: 'Test Results',
-					data: [1, 0, 0],
+					data: [0, 1, 0],
 					backgroundColor: [
 						'#4CAF50',
 						'rgb(255, 0, 0)',
@@ -248,10 +248,39 @@
 		<tbody>
 			
 				
-					<tr class="test_row pass">
-						<td>test_fetch_employee</td>
-						<td class="pass">pass</td>
-						<td>15.272 sec.</td>
+					<tr class="test_row fail" data-toggle="collapse" data-target="#test_create_employee">
+						<td>test_create_employee</td>
+						<td class="fail">fail</td>
+						<td>15.602 sec.</td>
+					</tr>
+					<tr id="test_create_employee" class="collapse">
+						<td colspan="3"><pre>employees_endpoint = <endpoints.employees.Employees object at 0x0000019CAE42BA90>
+
+    def test_create_employee(employees_endpoint):
+>       employees_endpoint.create_employee({
+            "name": "Jack",
+            "organization": "IT",
+            "role": "Junior"
+        })
+
+test_employees.py:10: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <endpoints.employees.Employees object at 0x0000019CAE42BA90>
+data = {'name': 'Jack', 'organization': 'IT', 'role': 'Junior'}
+
+    def create_employee(self, data):
+        response = self.session.post(self.url, headers=self.headers, json=data)
+        assert response.status_code == 200, f'Actual status code: {response.status_code}'
+>       assert response.json() == {
+            'employeeId': 2,
+            "name": "Jack",
+            "organization": "IT",
+            "role": "Junior"
+        }
+E       AssertionError
+
+..\endpoints\employees.py:54: AssertionError</pre></td>
 					</tr>
 				
 			
@@ -270,10 +299,10 @@
 		<tbody>
 			<tr>
 				<td>1</td>
+				<td>0</td>
 				<td>1</td>
 				<td>0</td>
-				<td>0</td>
-				<td>15.404 sec.</td>
+				<td>16.322 sec.</td>
 			</tr>
 		</tbody>
 	</table>

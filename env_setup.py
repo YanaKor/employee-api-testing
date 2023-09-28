@@ -5,8 +5,8 @@ from support.custom_errors import CredsNotFoundError
 
 ROOT_PATH = os.path.dirname(os.path.realpath(__file__))
 SCENARIOS_PATH = os.path.join(ROOT_PATH, "support", "scenarios.json")
-ALL_EMPLOYEES_PATH = os.path.join(ROOT_PATH, "schemas", "all_employees_schemas.json")
-SINGLE_EMPLOYEES_PATH = os.path.join(ROOT_PATH, "schemas", "single_employee_schemas.json")
+ALL_EMPLOYEES_PATH = os.path.join(ROOT_PATH, "schemas", "all_employees_schema.json")
+SINGLE_EMPLOYEES_PATH = os.path.join(ROOT_PATH, "schemas", "single_employee_schema.json")
 
 @dataclass
 class Endpoints:

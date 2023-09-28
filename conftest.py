@@ -37,7 +37,7 @@ def create_employees(db_connection):
     ]
 
     for user_data in user_data_list:
-        max_employee_id += 1
+        max_employee_id = max_employee_id + 1 if max_employee_id is not None and max_employee_id != 0 else 1
         user_id = db_connection.fetchone(
             "INSERT INTO employees (employee_id, name, organization, role) VALUES (%s, %s, %s, %s) RETURNING employee_id",
             max_employee_id, user_data["name"], user_data["organization"], user_data["role"]

@@ -221,7 +221,7 @@
 				labels: ['Tests Passed', 'Tests Failed', 'Tests Skipped'],
 				datasets: [{
 					label: 'Test Results',
-					data: [6, 0, 0],
+					data: [5, 0, 0],
 					backgroundColor: [
 						'#4CAF50',
 						'rgb(255, 0, 0)',
@@ -249,17 +249,17 @@
 			
 				
 					<tr class="test_row pass">
-						<td>test_fetch_single_employee</td>
+						<td>test_fetch_employee</td>
 						<td class="pass">pass</td>
-						<td>0.026 sec.</td>
+						<td>0.648 sec.</td>
 					</tr>
 				
 			
 				
 					<tr class="test_row pass">
-						<td>test_all_employees</td>
+						<td>test_fetch_list_of_employees</td>
 						<td class="pass">pass</td>
-						<td>0.009 sec.</td>
+						<td>0.116 sec.</td>
 					</tr>
 				
 			
@@ -267,23 +267,7 @@
 					<tr class="test_row pass">
 						<td>test_create_employee</td>
 						<td class="pass">pass</td>
-						<td>0.016 sec.</td>
-					</tr>
-				
-			
-				
-					<tr class="test_row pass">
-						<td>test_update_single_field</td>
-						<td class="pass">pass</td>
-						<td>0.014 sec.</td>
-					</tr>
-				
-			
-				
-					<tr class="test_row pass">
-						<td>test_update_entire_data</td>
-						<td class="pass">pass</td>
-						<td>0.014 sec.</td>
+						<td>0.024 sec.</td>
 					</tr>
 				
 			
@@ -291,7 +275,15 @@
 					<tr class="test_row pass">
 						<td>test_delete_employee</td>
 						<td class="pass">pass</td>
-						<td>0.014 sec.</td>
+						<td>0.036 sec.</td>
+					</tr>
+				
+			
+				
+					<tr class="test_row pass">
+						<td>test_validate_schema</td>
+						<td class="pass">pass</td>
+						<td>15.074 sec.</td>
 					</tr>
 				
 			
@@ -309,11 +301,11 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td>6</td>
-				<td>6</td>
+				<td>5</td>
+				<td>5</td>
 				<td>0</td>
 				<td>0</td>
-				<td>0.194 sec.</td>
+				<td>16.721 sec.</td>
 			</tr>
 		</tbody>
 	</table>
